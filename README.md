@@ -1,30 +1,78 @@
 # Project Development Planning Outline Skill
 
-本项目是面向 AI 辅助软件开发流程建设的规划类 Skill，旨在借鉴正式规划文件的结构体系、描述方法和任务分解逻辑，完善项目开发 planning 阶段的文档生成能力，为复杂项目的需求梳理、目标设定、任务拆解、实施保障和评估调整提供规范化支撑。
+为规范 AI 辅助软件开发规划文档编制，提升项目 planning 阶段的系统性、衔接性和可执行性，借鉴正式规划文件的结构体系、表达方式和任务分解方法，制定本 Skill。
 
-项目聚焦 `superpowers:writing-plans` 所承担的规划文档编写环节，重点构建“总体规划纲要、专项开发规划、具体实施方案、实施评估报告”相衔接的多层级 planning 体系。通过引入背景依据、现状问题、总体要求、指标体系、重点任务、重大工程、实施保障和监测评估等正式规划写法，推动项目 planning 从简单任务清单向结构清晰、边界明确、可执行、可评估的开发规划转变。
+本 Skill 面向 Codex 及相关 agentic development 场景，主要阐明项目开发规划纲要、专项开发规划、具体实施方案和规划实施评估报告的编写方法，是需求明确后开展项目规划、任务拆解、执行衔接和后续评估的重要参考。
 
-本 Skill 不替代 brainstorming、TDD、debugging、execution、verification、code review 或 branch finishing 等完整开发流程能力，而是作为 planning 阶段的增强模块，在需求明确后生成更系统的项目开发规划，并在实施阶段衔接可执行的文件路径、测试命令、验收标准和任务清单。
+## 一、项目定位
 
-## Contents
+Project Development Planning Outline Skill 是 `superpowers:writing-plans` 在规划文档编写环节的增强模块，重点服务项目开发 planning 阶段，不替代 brainstorming、TDD、debugging、execution、verification、code review 或 branch finishing 等开发流程能力。
 
-- `SKILL.md`: Skill trigger, workflow, output rules, and boundaries.
-- `agents/openai.yaml`: UI metadata for the skill.
-- `references/official-style.md`: Formal planning language patterns and writing habits.
-- `references/project-planning-template.md`: Templates for planning outlines, special plans, implementation schemes, and assessment reports.
-- `references/implementation-layer.md`: Engineering execution layer adapted from implementation planning practice.
+本 Skill 坚持正式规划写法与工程执行要求相结合，推动项目规划由简单任务清单向层级清晰、目标明确、边界可控、任务可落、结果可评的开发规划体系转变。
 
-## Intended Use
+## 二、总体要求
 
-Use this skill when you need to write or revise:
+坚持目标导向、问题导向和结果导向，统筹项目背景、现状基础、总体要求、指标体系、重点任务、实施保障和评估调整，形成“总体规划纲要、专项开发规划、具体实施方案、实施评估报告”相衔接的多层级 planning 文件体系。
 
-- Project development planning outlines
-- Technical special plans
-- Feature or milestone implementation schemes
-- Architecture, migration, testing, deployment, or security plans
-- Planning assessment and adjustment reports
-- Executable implementation checklists connected to a formal plan
+坚持规划表达与工程落地相统一，在正式规划章节中明确方向、原则、目标和任务，在实施任务层中明确文件路径、测试命令、预期输出、验收标准和提交步骤，保障规划文件既具备总体指导作用，也具备可执行、可验证、可复盘的工程价值。
 
-## Boundary
+## 三、主要目标
 
-This skill replaces or augments only the planning-document-writing role of `superpowers:writing-plans`. When implementation begins, hand off to the appropriate execution, testing, verification, review, and branch-completion skills.
+到本 Skill 应用成熟阶段，基本形成适用于软件项目开发的规划文档生成能力，项目 planning 的规范化、结构化和可执行化水平明显提升。
+
+- 规划层级更加清晰。形成总体规划、专项规划、实施方案和评估报告相互衔接的文件体系。
+- 目标指标更加明确。区分约束性目标和预期性目标，强化验收标准、质量要求和结果评估。
+- 任务分解更加规范。围绕重点任务、重大工程和阶段安排组织开发工作，减少碎片化 todo。
+- 执行衔接更加顺畅。将规划内容转化为 exact files、TDD steps、commands、expected output 和 commit checkpoints。
+- 实施评估更加可追踪。通过监测评估和调整机制，支撑规划执行后的复盘、修订和持续改进。
+
+## 四、重点任务
+
+### 完善规划纲要模板，夯实项目 planning 基础
+
+围绕项目背景、现状问题、形势判断、总体要求、目标指标、重点任务、系统布局、实施保障和监测评估等核心章节，形成适用于复杂软件项目的总体规划纲要模板，为后续专项规划和实施方案提供上位依据。
+
+### 健全专项规划体系，提升分领域任务组织能力
+
+面向 frontend、backend、data、security、testing、deployment、migration、architecture 和 UX 等领域，建立专项开发规划写法，明确专项定位、现状短板、专项目标、重点任务、协同关系和保障措施，增强多领域开发工作的协同性。
+
+### 规范实施方案写法，强化规划到执行的转化
+
+将规划目标细化为具体实施方案，明确实施背景、目标范围、文件结构、模块边界、测试验收、发布回滚和风险处置，推动规划任务转化为可执行、可检查、可提交的工程步骤。
+
+### 构建评估调整机制，保障规划持续发挥作用
+
+建立规划实施评估报告模板，围绕目标完成情况、重点任务进展、主要问题原因、调整建议和后续安排开展复盘，形成规划编制、实施、评估、调整的闭环机制。
+
+## 五、文件结构
+
+```text
+.
+├── SKILL.md
+├── agents/
+│   └── openai.yaml
+└── references/
+    ├── implementation-layer.md
+    ├── official-style.md
+    └── project-planning-template.md
+```
+
+- `SKILL.md`：明确 Skill 的触发场景、使用流程、输出规则和能力边界。
+- `agents/openai.yaml`：提供 Skill 展示名称、简要说明和默认提示。
+- `references/official-style.md`：沉淀正式规划文件的语言习惯、句式结构和动词体系。
+- `references/project-planning-template.md`：提供总体规划纲要、专项规划、实施方案和评估报告模板。
+- `references/implementation-layer.md`：衔接工程执行层，明确文件路径、测试命令、预期结果和提交步骤。
+
+## 六、适用范围
+
+本 Skill 适用于下列场景：
+
+- 编写项目开发规划纲要；
+- 编写前端、后端、数据、安全、测试、部署、迁移、架构等专项开发规划；
+- 编写功能、里程碑、迁移批次或发布工作的具体实施方案；
+- 编写规划实施评估报告和调整建议；
+- 将正式规划文件写法转化为可执行的软件开发 planning 文档。
+
+## 七、实施边界
+
+本 Skill 仅替代或增强 `superpowers:writing-plans` 所承担的规划文档编写职责。进入代码实施阶段后，应继续衔接相应的执行、测试、验证、评审和分支收尾能力，确保规划目标在工程实践中有效落实。
