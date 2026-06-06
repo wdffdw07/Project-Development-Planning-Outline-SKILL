@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Project Development Planning Outline"
+  short_description: "Write formal project planning outlines, special plans, and executable implementation plans."
+  default_prompt: "Use Project Development Planning Outline to turn my project requirements into a formal planning outline, special plans, and executable implementation tasks."
